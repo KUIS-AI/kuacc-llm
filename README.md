@@ -75,13 +75,10 @@ TODO
 * lmsys/fastchat-t5-3b-v1.0 (6.3G) 
 * lmsys/vicuna-* (7b-delta-v1.1 (13G), 13b-delta-v1.1 (25G)) 
 * mosaicml/mpt-* (1b-redpajama-200b (5.0G), 1b-redpajama-200b-dolly (5.0G), 7b (13G), 7b-chat (13G), 7b-instruct (13G), 7b-storywriter (13G)) (from open-llms, requires einops, trust_remote_code=True, see hf page for details)
-* nomic-ai/gpt4all-13b-snoozy ==
-* nomic-ai/gpt4all-j (23G) (from open-llms)
-* nomic-ai/gpt4all-j-lora -- FAILED! missing config
-* nomic-ai/gpt4all-lora -- FAILED! missing config (gururise refers to it but don't know how to download, seems worse than tloen/alpaca-lora-7b)
+* nomic-ai/gpt4all-* (13b-snoozy (49G), j (23G), lora (?), j-lora (?)) (gururise refers to it but don't know how to download -lora, seems worse than tloen/alpaca-lora-7b)
 * openlm-research/open_llama_7b_preview_300bt (13G) (from open-llms, AutoModel does not work, use `AutoModelForCausalLM.from_pretrained("openlm-research/open_llama_7b_preview_300bt", subfolder="open_llama_7b_preview_300bt_transformers_weights")`)
 * togethercomputer/GPT-JT-* (6B-v0 (12G), Moderation-6B (12G)) 
-* togethercomputer/GPT-NeoXT-Chat-Base-20B ==
+* togethercomputer/GPT-NeoXT-Chat-Base-20B (39G)
 * togethercomputer/Pythia-Chat-Base-7B (13G) 
 * togethercomputer/RedPajama-INCITE-* (Base-3B-v1 (5.4G), Base-7B-v0.1 (13G), Chat-3B-v1 (5.4G), Chat-7B-v0.1 (13G), Instruct-3B-v1 (5.4G), Instruct-7B-v0.1 (13G)) (from open-llms)
 

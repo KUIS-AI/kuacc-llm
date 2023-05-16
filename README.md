@@ -5,14 +5,38 @@ tldr: `$ source /datasets/NLP/setenv.sh` to set up your environment and access m
 
 This currently sets the TORCH_HOME and HF_HOME and directs the following commands to use the cache under /datasets/NLP:
 ```
-transformers.AutoModel.from_pretrained("gpt2")
+transformers.AutoModelForCausalLM.from_pretrained("gpt2")
 datasets.load_dataset("tiny_shakespeare")
 torchvision.get_model("resnet50", weights="DEFAULT")
 ```
 
-To prompt a llm:
+To generate text:
 ```
-TODO
+from transformers import AutoModelForCausalLM, AutoTokenizer
+model = AutoModelForCausalLM.from_pretrained("gpt2")
+tokenizer = AutoTokenizer.from_pretrained("gpt2")
+inputs = tokenizer("Hello, I am", return_tensors="pt")
+tokens = model.generate(**inputs)
+tokenizer.decode(tokens[0])
+```
+
+Alternative method to generate text:
+```
+from transformers import pipeline
+generator = pipeline("text-generation", model="gpt2")
+generator("Hello, I'm a language model,")
+```
+
+To investigate weights:
+```
+from transformers import AutoModelForCausalLM
+model = AutoModelForCausalLM.from_pretrained("gpt2")
+for n,p in model.named_parameters():
+  print((n,p.shape))
+
+('transformer.wte.weight', torch.Size([50257, 768]))
+('transformer.wpe.weight', torch.Size([1024, 768]))
+...
 ```
 
 To use a llm+adapter:

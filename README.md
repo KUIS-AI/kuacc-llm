@@ -102,3 +102,11 @@ TODO
 * https://huggingface.co/nomic-ai (gpt4all)
 * https://huggingface.co/facebook (opt)
 * https://huggingface.co/google (flan-t5, flan-ul2, everything (-:)
+
+
+## Model Lists and Evaluation
+
+* https://github.com/eugeneyan/open-llms
+* https://crfm.stanford.edu/helm/latest/?models=1
+* https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
+* https://github.com/EleutherAI/lm-evaluation-harness

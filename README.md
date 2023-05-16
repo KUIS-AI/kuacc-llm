@@ -39,6 +39,11 @@ for n,p in model.named_parameters():
 ...
 ```
 
+To investigate activations:
+```
+TODO
+```
+
 To use a llm+adapter:
 ```
 TODO

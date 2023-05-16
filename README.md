@@ -24,62 +24,58 @@ TODO
 ## Downloaded resources:
 
 ### huggingface/transformers
-* EleutherAI/gpt-j-6b (23G) ++ (from open-llms)
-* EleutherAI/gpt-neo-125m (505M) ++ (from open-llms)
-* EleutherAI/gpt-neox-20b (39G) ++ (from open-llms)
-* EleutherAI/pythia-* (70m (160M), 160m (360M), 410m (873M), 1b (2.0G), 1.4b (2.8G), 2.8b (5.4G), 6.9b (13G), 12b (?)) ++ (from open-llms)
-* EleutherAI/pythia-12b () == (from open-llms)
-* OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5 (23G) ++ (from open-llms)
-* StabilityAI/stablelm-tuned-alpha-* (3b (14G), 7b (30G)) ++ (from open-llms)
-* aisquared/chopt-* (125m (240M), 350m (635M), 1_3b (2.5G), 2_7b (5.0G)) ++
-* aisquared/chopt-research-* (125m (240M), 350m (635M), 1_3b (2.5G), 2_7b (5.0G)) ++
-* aisquared/dlite-v2-* (124m (253M), 355m (704M), 774m (1.5G), 1_5b (3.0G)) ++ (from open-llms, lightweight gpt-2 based, finetuned)
-* bigscience/bloom-560m (1.1G) ++
-* cerebras/Cerebras-GPT-* (111M (467M), 256M (1.1G), 590M (2.3G), 1.3B (5.1G), 2.7B (11G), 6.7B (26G), 13B (49G)) ++ (from open-llms)
-* databricks/dolly-* (v1-6b (12G), v2-3b (5.4G), v2-7b (13G), v2-12b (23G)) ++ (from open-llms)
-* decapoda-research/llama-* (7b-hf (13G), 13b-hf (37G), 30b-hf (77G)) ++ AutoConfig:ok, AutoTokenizer:wrong-name-error, AutoModel:ok
-* google/flan-t5-* (small (298M), base (949M), large (3.0G), xl (11G), xxl (43G)) ++
-* google/flan-ul2 (37G) ++
-* google/ul2 (37G) ++
-* gpt2 (528M) ++
-* gpt2-* (medium (1.5G), large (3.1G), xl (6.1G)) ++
-* h2oai/h2ogpt-oig-oasst1-512-6.9b (13G) ++ (from open-llms)
-* huggyllama/llama-* (7b (13G), 13b (25G), 30b (61G), 65b (?)) ++
+* EleutherAI/gpt-j-6b (23G) (from open-llms)
+* EleutherAI/gpt-neo-125m (505M) (from open-llms)
+* EleutherAI/gpt-neox-20b (39G) (from open-llms)
+* EleutherAI/pythia-* (70m (160M), 160m (360M), 410m (873M), 1b (2.0G), 1.4b (2.8G), 2.8b (5.4G), 6.9b (13G), 12b (23G)) (from open-llms)
+* OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5 (23G) (from open-llms)
+* StabilityAI/stablelm-tuned-alpha-* (3b (14G), 7b (30G)) (from open-llms)
+* aisquared/chopt-* (125m (240M), 350m (635M), 1_3b (2.5G), 2_7b (5.0G)) 
+* aisquared/chopt-research-* (125m (240M), 350m (635M), 1_3b (2.5G), 2_7b (5.0G)) 
+* aisquared/dlite-v2-* (124m (253M), 355m (704M), 774m (1.5G), 1_5b (3.0G)) (from open-llms, lightweight gpt-2 based, finetuned)
+* bigscience/bloom-560m (1.1G) 
+* cerebras/Cerebras-GPT-* (111M (467M), 256M (1.1G), 590M (2.3G), 1.3B (5.1G), 2.7B (11G), 6.7B (26G), 13B (49G)) (from open-llms)
+* databricks/dolly-* (v1-6b (12G), v2-3b (5.4G), v2-7b (13G), v2-12b (23G)) (from open-llms)
+* decapoda-research/llama-* (7b-hf (13G), 13b-hf (37G), 30b-hf (77G)) AutoConfig:ok, AutoTokenizer:wrong-name-error, AutoModel:ok
+* google/flan-t5-* (small (298M), base (949M), large (3.0G), xl (11G), xxl (43G)) 
+* google/flan-ul2 (37G), google/ul2 (37G) 
+* openai-gpt (461M), gpt2 (528M), gpt2-medium (1.5G), gpt2-large (3.1G), gpt2-xl (6.1G)
+* h2oai/h2ogpt-oig-oasst1-512-6.9b (13G) (from open-llms)
+* huggyllama/llama-* (7b (13G), 13b (25G), 30b (61G), 65b (?)) 
 * huggyllama/llama-65b ==
-* lmsys/fastchat-t5-3b-v1.0 (6.3G) ++
-* lmsys/vicuna-* (7b-delta-v1.1 (13G), 13b-delta-v1.1 (25G)) ++
-* mosaicml/mpt-1b-redpajama-* (200b (5.0G), 200b-dolly (5.0G)) ++ (from open-llms, requires einops, trust_remote_code=True, see hf page for details)
-* mosaicml/mpt-7b (13G) ++
-* mosaicml/mpt-7b-* (chat (13G), instruct (13G), storywriter (13G)) ++
+* lmsys/fastchat-t5-3b-v1.0 (6.3G) 
+* lmsys/vicuna-* (7b-delta-v1.1 (13G), 13b-delta-v1.1 (25G)) 
+* mosaicml/mpt-* (1b-redpajama-200b (5.0G), 1b-redpajama-200b-dolly (5.0G), 7b (13G), 7b-chat (13G), 7b-instruct (13G), 7b-storywriter (13G)) (from open-llms, requires einops, trust_remote_code=True, see hf page for details)
 * nomic-ai/gpt4all-13b-snoozy ==
-* nomic-ai/gpt4all-j (23G) ++ (from open-llms)
+* nomic-ai/gpt4all-j (23G) (from open-llms)
 * nomic-ai/gpt4all-j-lora -- FAILED! missing config
 * nomic-ai/gpt4all-lora -- FAILED! missing config (gururise refers to it but don't know how to download, seems worse than tloen/alpaca-lora-7b)
-* openai-gpt (461M) ++
-* openlm-research/open_llama_7b_preview_300bt (13G) ++ (from open-llms, AutoModel does not work, use `AutoModelForCausalLM.from_pretrained("openlm-research/open_llama_7b_preview_300bt", subfolder="open_llama_7b_preview_300bt_transformers_weights")`)
-* togethercomputer/GPT-JT-* (6B-v0 (12G), Moderation-6B (12G)) ++
+* openlm-research/open_llama_7b_preview_300bt (13G) (from open-llms, AutoModel does not work, use `AutoModelForCausalLM.from_pretrained("openlm-research/open_llama_7b_preview_300bt", subfolder="open_llama_7b_preview_300bt_transformers_weights")`)
+* togethercomputer/GPT-JT-* (6B-v0 (12G), Moderation-6B (12G)) 
 * togethercomputer/GPT-NeoXT-Chat-Base-20B ==
-* togethercomputer/Pythia-Chat-Base-7B (13G) ++
-* togethercomputer/RedPajama-INCITE-* (Base-3B-v1 (5.4G), Base-7B-v0.1 (13G), Chat-3B-v1 (5.4G), Chat-7B-v0.1 (13G), Instruct-3B-v1 (5.4G), Instruct-7B-v0.1 (13G)) ++ (from open-llms)
+* togethercomputer/Pythia-Chat-Base-7B (13G) 
+* togethercomputer/RedPajama-INCITE-* (Base-3B-v1 (5.4G), Base-7B-v0.1 (13G), Chat-3B-v1 (5.4G), Chat-7B-v0.1 (13G), Instruct-3B-v1 (5.4G), Instruct-7B-v0.1 (13G)) (from open-llms)
+
 
 ### huggingface/datasets
 
-* bookcorpus (4.6G) ++
-* databricks/databricks-dolly-15k (12M) ++
-* enwik8 (99M) ++
-* glue (232M) ++
-* imdb (128M) ++
-* mosaicml/dolly_hhrlhf (46M) ++
-* openwebtext (38G) ++
-* piqa (5.2M) ++
-* ptb_text_only (5.8M) ++
-* sciq (7.4M) ++
-* squad (87M) ++
-* super_glue (285M) ++
-* tatsu-lab/alpaca (45M) ++ (the original)
-* tiny_shakespeare (1.2M) ++
-* wikitext (1.1G) ++
-* yahma/alpaca-cleaned (39M) ++ (https://github.com/gururise/AlpacaDataCleaned as of 2023-04-10)
+* bookcorpus (4.6G) 
+* databricks/databricks-dolly-15k (12M) 
+* enwik8 (99M) 
+* glue (232M) 
+* imdb (128M) 
+* mosaicml/dolly_hhrlhf (46M) 
+* openwebtext (38G) 
+* piqa (5.2M) 
+* ptb_text_only (5.8M) 
+* sciq (7.4M) 
+* squad (87M) 
+* super_glue (285M) 
+* tatsu-lab/alpaca (45M) (the original)
+* tiny_shakespeare (1.2M) 
+* wikitext (1.1G) 
+* yahma/alpaca-cleaned (39M) (https://github.com/gururise/AlpacaDataCleaned as of 2023-04-10)
+
 
 ### torchvision.models
 

@@ -1,7 +1,7 @@
 # kuacc-llm
 Common LLM setup for the KUACC cluster in Koc University, Istanbul.
 
-tldr: `$ source setenv.sh` to set up your environment and access models/datasets without downloading them.
+tldr: `$ source /datasets/NLP/setenv.sh` to set up your environment and access models/datasets without downloading them.
 
 This currently sets the TORCH_HOME and HF_HOME and directs the following commands to use the cache under /datasets/NLP:
 ```

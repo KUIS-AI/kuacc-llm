@@ -1,5 +1,50 @@
 ## TODO:
 
+* == stabilityai/stablelm-base-alpha-3b
+* == pythainlp/wangchanglm-7.5B-sft-en-sharded
+* == stabilityai/stablelm-tuned-alpha-3b
+* == hakurei/instruct-12b
+* == lamini/instruct-tuned-3b
+* == bigscience/bloomz-3b
+* == vicgalle/gpt2-alpaca-gpt4
+* == cerebras/Cerebras-GPT-111M
+* == distilgpt2
+* == gpt2
+* == facebook/opt-125m
+* == facebook/opt-350m
+* == cerebras/Cerebras-GPT-1.3B
+* == gpt2-medium
+* == gpt2-large
+* == aisquared/dlite-v2-774m
+* == gpt2-xl
+* == facebook/opt-1.3b
+* == stabilityai/stablelm-tuned-alpha-7b
+* == Salesforce/codegen-16B-multi
+* == HuggingFaceH4/starchat-alpha
+* == databricks/dolly-v2-3b
+* == togethercomputer/RedPajama-INCITE-Base-3B-v1
+* == KoboldAI/OPT-13B-Nerybus-Mix
+* == facebook/opt-13b
+* == EleutherAI/gpt-j-6b
+* == databricks/dolly-v2-7b
+* == Pirr/pythia-13b-deduped-green_devil
+* == databricks/dolly-v2-12b
+* == OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5
+* == togethercomputer/RedPajama-INCITE-Base-7B-v0.1
+* == EleutherAI/gpt-neox-20b
+* == nomic-ai/gpt4all-j
+* == chainyo/alpaca-lora-7b
+* == wordcab/llama-natural-instructions-13b
+* == eachadea/vicuna-7b-1.1
+* == CarperAI/stable-vicuna-13b-delta
+* == eachadea/vicuna-13b
+* == chavinlo/gpt4-x-alpaca
+* == TheBloke/vicuna-13B-1.1-HF
+* == TheBloke/dromedary-65b-lora-HF
+* == Aeala/GPT4-x-AlpacaDente2-30b
+* == digitous/Alpacino30b
+* == MetaIX/GPT4-X-Alpasta-30b
+
 * https://arxiv.org/abs/2210.17323 (GPTQ quantized)
 * https://bair.berkeley.edu/blog/2023/04/03/koala/
 * https://chat.lmsys.org/

@@ -53,9 +53,7 @@ TODO
 ## Downloaded resources:
 
 ### huggingface/transformers
-* EleutherAI/gpt-j-6b (23G) (from open-llms)
-* EleutherAI/gpt-neo-125m (505M) (from open-llms)
-* EleutherAI/gpt-neox-20b (39G) (from open-llms)
+* EleutherAI/gpt-* (j-6b (23G), neo-125m (505M), neox-20b (39G)) (from open-llms)
 * EleutherAI/pythia-* (70m (160M), 160m (360M), 410m (873M), 1b (2.0G), 1.4b (2.8G), 2.8b (5.4G), 6.9b (13G), 12b (23G)) (from open-llms)
 * OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5 (23G) (from open-llms)
 * StabilityAI/stablelm-tuned-alpha-* (3b (14G), 7b (30G)) (from open-llms)
@@ -70,15 +68,13 @@ TODO
 * google/flan-ul2 (37G), google/ul2 (37G) 
 * openai-gpt (461M), gpt2 (528M), gpt2-medium (1.5G), gpt2-large (3.1G), gpt2-xl (6.1G)
 * h2oai/h2ogpt-oig-oasst1-512-6.9b (13G) (from open-llms)
-* huggyllama/llama-* (7b (13G), 13b (25G), 30b (61G), 65b (?)) 
-* huggyllama/llama-65b ==
+* huggyllama/llama-* (7b (13G), 13b (25G), 30b (61G), 65b (123G)) 
 * lmsys/fastchat-t5-3b-v1.0 (6.3G) 
 * lmsys/vicuna-* (7b-delta-v1.1 (13G), 13b-delta-v1.1 (25G)) 
 * mosaicml/mpt-* (1b-redpajama-200b (5.0G), 1b-redpajama-200b-dolly (5.0G), 7b (13G), 7b-chat (13G), 7b-instruct (13G), 7b-storywriter (13G)) (from open-llms, requires einops, trust_remote_code=True, see hf page for details)
 * nomic-ai/gpt4all-* (13b-snoozy (49G), j (23G), lora (?), j-lora (?)) (gururise refers to it but don't know how to download -lora, seems worse than tloen/alpaca-lora-7b)
-* openlm-research/open_llama_7b_preview_300bt (13G) (from open-llms, AutoModel does not work, use `AutoModelForCausalLM.from_pretrained("openlm-research/open_llama_7b_preview_300bt", subfolder="open_llama_7b_preview_300bt_transformers_weights")`)
-* togethercomputer/GPT-JT-* (6B-v0 (12G), Moderation-6B (12G)) 
-* togethercomputer/GPT-NeoXT-Chat-Base-20B (39G)
+* openlm-research/open_llama_7b_preview_300bt (13G) (from open-llms, use `AutoModelForCausalLM.from_pretrained("openlm-research/open_llama_7b_preview_300bt", subfolder="open_llama_7b_preview_300bt_transformers_weights")`)
+* togethercomputer/GPT-* (JT-6B-v0 (12G), JT-Moderation-6B (12G), NeoXT-Chat-Base-20B (39G)) 
 * togethercomputer/Pythia-Chat-Base-7B (13G) 
 * togethercomputer/RedPajama-INCITE-* (Base-3B-v1 (5.4G), Base-7B-v0.1 (13G), Chat-3B-v1 (5.4G), Chat-7B-v0.1 (13G), Instruct-3B-v1 (5.4G), Instruct-7B-v0.1 (13G)) (from open-llms)
 

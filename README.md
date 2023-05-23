@@ -54,30 +54,59 @@ TODO
 
 ### huggingface/transformers
 
+* Aeala/GPT4-x-AlpacaDente2-30b (61G) (from open_llm_leaderboard)
 * aisquared/chopt-* (125m (240M), 350m (635M), 1_3b (2.5G), 2_7b (5.0G)) 
 * aisquared/chopt-research-* (125m (240M), 350m (635M), 1_3b (2.5G), 2_7b (5.0G)) 
-* aisquared/dlite-v2-* (124m (253M), 355m (704M), 774m (1.5G), 1_5b (3.0G)) (from open-llms, lightweight gpt-2 based, finetuned)
-* bigscience/bloom-560m (1.1G) 
-* cerebras/Cerebras-GPT-* (111M (467M), 256M (1.1G), 590M (2.3G), 1.3B (5.1G), 2.7B (11G), 6.7B (26G), 13B (49G)) (from open-llms)
-* databricks/dolly-* (v1-6b (12G), v2-3b (5.4G), v2-7b (13G), v2-12b (23G)) (from open-llms)
+* aisquared/dlite-v2-* (124m (253M), 355m (704M), 774m (1.5G), 1_5b (3.0G)) (from open-llms, open_llm_leaderboard, lightweight gpt-2 based, finetuned)
+* bigscience/bloom-560m (1.1G), bigscience/bloomz-3b (5.7G)
+* CarperAI/stable-vicuna-13b-delta (25G) (from open_llm_leaderboard)
+* cerebras/Cerebras-GPT-* (111M (467M), 256M (1.1G), 590M (2.3G), 1.3B (5.1G), 2.7B (11G), 6.7B (26G), 13B (49G)) (from open-llms, open_llm_leaderboard)
+* chainyo/alpaca-lora-7b (13G) (from open_llm_leaderboard)
+* chavinlo/gpt4-x-alpaca (49G) (from open_llm_leaderboard)
+* databricks/dolly-* (v1-6b (12G), v2-3b (5.4G), v2-7b (13G), v2-12b (23G)) (from open-llms, open_llm_leaderboard)
 * decapoda-research/llama-* (7b-hf (13G), 13b-hf (37G), 30b-hf (77G)) AutoConfig:ok, AutoTokenizer:wrong-name-error, AutoModel:ok
-* EleutherAI/gpt-* (j-6b (23G), neo-125m (505M), neox-20b (39G)) (from open-llms)
+* digitous/Alpacino30b (61G) (from open_llm_leaderboard)
+* eachadea/vicuna-* (7b-1.1 (13G), 13b (25G)) (from open_llm_leaderboard)
+* EleutherAI/gpt-* (j-6b (23G), neo-125m (505M), neox-20b (39G)) (from open-llms, open_llm_leaderboard)
 * EleutherAI/pythia-* (70m (160M), 160m (360M), 410m (873M), 1b (2.0G), 1.4b (2.8G), 2.8b (5.4G), 6.9b (13G), 12b (23G)) (from open-llms)
+* facebook/llama-* (7B (13G), 13B (25G)) (the originals, not an hf repo, to load use e.g. AutoModelForCausalLM.from_pretrained("/datasets/NLP/huggingface/hub/models--facebook--llama-7B"))
+* facebook/opt-* (125m (242M), 350m (636M), 1.3b (2.5G), 13b (25G)) (from open_llm_leaderboard)
 * google/flan-t5-* (small (298M), base (949M), large (3.0G), xl (11G), xxl (43G)) 
 * google/flan-ul2 (37G), google/ul2 (37G) 
 * h2oai/h2ogpt-oig-oasst1-512-6.9b (13G) (from open-llms)
+* hakurei/instruct-12b (45G)
+* HuggingFaceH4/starchat-alpha (30G) (from open_llm_leaderboard)
 * huggyllama/llama-* (7b (13G), 13b (25G), 30b (61G), 65b (123G)) 
+* KoboldAI/OPT-13B-Nerybus-Mix (11G) -- ERROR-reload (from open_llm_leaderboard)
+* lamini/instruct-tuned-3b (5.7G)
 * lmsys/fastchat-t5-3b-v1.0 (6.3G) 
-* lmsys/vicuna-* (7b-delta-v1.1 (13G), 13b-delta-v1.1 (25G)) 
+* lmsys/vicuna-* (7b-delta-v1.1 (13G), 13b-delta-v1.1 (25G), 7b (13G), 13b (25G)) (for 7b/13b use e.g. AutoModelForCausalLM.from_pretrained("/datasets/NLP/huggingface/hub/models--lmsys--vicuna-7b"))
+* MetaIX/GPT4-X-Alpasta-30b (61G) (from open_llm_leaderboard)
 * mosaicml/mpt-* (1b-redpajama-200b (5.0G), 1b-redpajama-200b-dolly (5.0G), 7b (13G), 7b-chat (13G), 7b-instruct (13G), 7b-storywriter (13G)) (from open-llms, requires einops, trust_remote_code=True, see hf page for details)
-* nomic-ai/gpt4all-* (13b-snoozy (49G), j (23G), lora (?), j-lora (?)) (gururise refers to it but don't know how to download -lora, seems worse than tloen/alpaca-lora-7b)
-* openai-gpt (461M), gpt2 (528M), gpt2-medium (1.5G), gpt2-large (3.1G), gpt2-xl (6.1G)
-* OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5 (23G) (from open-llms)
-* openlm-research/open_llama_7b_preview_300bt (13G) (from open-llms, use `AutoModelForCausalLM.from_pretrained("openlm-research/open_llama_7b_preview_300bt", subfolder="open_llama_7b_preview_300bt_transformers_weights")`)
-* StabilityAI/stablelm-tuned-alpha-* (3b (14G), 7b (30G)) (from open-llms)
+* nomic-ai/gpt4all-* (13b-snoozy (49G), j (23G)) (gururise refers to it but don't know how to download -lora, seems worse than tloen/alpaca-lora-7b) (from open_llm_leaderboard)
+* nomic-ai/gpt4all-* (lora, j-lora) -- ERROR, reload
+* openai-gpt (461M), gpt2 (528M), gpt2-medium (1.5G), gpt2-large (3.1G), gpt2-xl (6.1G), distilgpt2 (341M) (from open_llm_leaderboard)
+* OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5 (23G) (from open-llms, open_llm_leaderboard)
+* openlm-research/open_llama_7b_preview_300bt (13G) (from open-llms, open_llm_leaderboard, use `AutoModelForCausalLM.from_pretrained("openlm-research/open_llama_7b_preview_300bt", subfolder="open_llama_7b_preview_300bt_transformers_weights")`)
+* Pirr/pythia-13b-deduped-green_devil (23G) (from open_llm_leaderboard)
+* pythainlp/wangchanglm-7.5B-sft-en-sharded (32G) (from open_llm_leaderboard)
+* Salesforce/codegen-16B-multi (31G) (from open_llm_leaderboard)
+* stabilityai/stablelm-* (base-alpha-3b (14G), tuned-alpha-3b (14G), tuned-alpha-7b (30G)) (from open-llms, open_llm_leaderboard)
+* TheBloke/dromedary-65b-lora-HF (123G) (from open_llm_leaderboard)
+* TheBloke/vicuna-13B-1.1-HF (25G) (from open_llm_leaderboard)
 * togethercomputer/GPT-* (JT-6B-v0 (12G), JT-Moderation-6B (12G), NeoXT-Chat-Base-20B (39G)) 
 * togethercomputer/Pythia-Chat-Base-7B (13G) 
-* togethercomputer/RedPajama-INCITE-* (Base-3B-v1 (5.4G), Base-7B-v0.1 (13G), Chat-3B-v1 (5.4G), Chat-7B-v0.1 (13G), Instruct-3B-v1 (5.4G), Instruct-7B-v0.1 (13G)) (from open-llms)
+* togethercomputer/RedPajama-INCITE-* (Base-3B-v1 (5.4G), Base-7B-v0.1 (13G), Chat-3B-v1 (5.4G), Chat-7B-v0.1 (13G), Instruct-3B-v1 (5.4G), Instruct-7B-v0.1 (13G)) (from open-llms, open_llm_leaderboard)
+* vicgalle/gpt2-alpaca-gpt4 (492M) (from open_llm_leaderboard)
+* wordcab/llama-natural-instructions-13b (37G) (from open_llm_leaderboard)
+
+### downloading
+* ausboss/llama-30b-supercot
+* openaccess-ai-collective/manticore-13b
+* TheBloke/wizardLM-7B-HF
+* nomic-ai/gpt4all-lora
+* nomic-ai/gpt4all-j-lora
+* KoboldAI/OPT-13B-Nerybus-Mix
 
 
 ### huggingface/datasets
@@ -99,6 +128,35 @@ TODO
 * tiny_shakespeare (1.2M) 
 * wikitext (1.1G) 
 * yahma/alpaca-cleaned (39M) (https://github.com/gururise/AlpacaDataCleaned as of 2023-04-10)
+
+
+### downloading
+
+* ccdv/cnn_dailymail
+* xsum
+* samsum
+* multi_news
+* billsum
+* amazon_reviews_multi
+* big_patent
+* MBZUAI/LaMini-instruction
+* victor123/evol_instruct_70k
+* emozilla/soda_synthetic_dialogue
+* gsm8k
+* Hello-SimpleAI/HC3
+* databricks/databricks-dolly-15k
+* donfu/oa-stackexchange
+* OllieStanley/oa_camel
+* OllieStanley/humaneval-mbpp-codegen-qa
+* OllieStanley/humaneval-mbpp-testgen-qa
+* mikegarts/oa_tell_a_joke_10000
+* totuta/youtube_subs_howto100M
+* dctanner/oa_recipes
+* ehartford/oa_leet10k
+* checkai/instruction-poems
+* nomic-ai/gpt4all-j-prompt-generations
+* allenai/prosocial-dialog
+* laion/OIG
 
 
 ### torchvision.models

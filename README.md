@@ -3,11 +3,19 @@ Common LLM setup for the KUACC cluster in Koc University, Istanbul.
 
 tldr: `$ source /datasets/NLP/setenv.sh` to set up your environment and access models/datasets without downloading them.
 
-This currently sets the TORCH_HOME and HF_HOME and directs the following commands to use the cache under /datasets/NLP:
+This currently sets the TORCH_HOME and HF_HOME and directs the following commands to use the read-only cache under /datasets/NLP:
 ```
+import transformers, datasets, torchvision
 transformers.AutoModelForCausalLM.from_pretrained("gpt2")
 datasets.load_dataset("tiny_shakespeare")
 torchvision.get_model("resnet50", weights="DEFAULT")
+```
+
+To build the python environment to use these models and datasets use:
+```
+$ conda env create -f environment.yml
+# OR
+$ conda create --name llm --file spec-file.txt
 ```
 
 To generate text:
@@ -99,64 +107,69 @@ TODO
 * togethercomputer/RedPajama-INCITE-* (Base-3B-v1 (5.4G), Base-7B-v0.1 (13G), Chat-3B-v1 (5.4G), Chat-7B-v0.1 (13G), Instruct-3B-v1 (5.4G), Instruct-7B-v0.1 (13G)) (from open-llms, open_llm_leaderboard)
 * vicgalle/gpt2-alpaca-gpt4 (492M) (from open_llm_leaderboard)
 * wordcab/llama-natural-instructions-13b (37G) (from open_llm_leaderboard)
+* ehartford/WizardLM-7B-Uncensored (13G)
+* ehartford/WizardLM-13B-Uncensored (25G) (see https://t.co/9vrPyktaIz)
+* ehartford/Wizard-Vicuna-13B-Uncensored (49G)
+* openaccess-ai-collective/manticore-13b (25G)
+* TheBloke/wizardLM-7B-HF (13G)
+* KoboldAI/OPT-13B-Nerybus-Mix (25G) -- testing on *llm2*
+
 
 ### downloading
-* ausboss/llama-30b-supercot
-* openaccess-ai-collective/manticore-13b
-* TheBloke/wizardLM-7B-HF
-* nomic-ai/gpt4all-lora
-* nomic-ai/gpt4all-j-lora
-* KoboldAI/OPT-13B-Nerybus-Mix
+
+* ausboss/llama-30b-supercot -- error, retry on *llm*
+* nomic-ai/gpt4all-lora -- error
+* nomic-ai/gpt4all-j-lora -- error
+* ehartford/WizardLM-30B-Uncensored -- error
+* ehartford/Wizard-Vicuna-7B-Uncensored -- error
+* ehartford/alpaca1337-13b-4bit -- error: OSError: ehartford/alpaca1337-13b-4bit does not appear to have a file named config.json. Checkout 'https://huggingface.co/ehartford/alpaca1337-13b-4bit/main' for available files.
+* ehartford/alpaca1337-7b-4bit -- error: OSError: ehartford/alpaca1337-7b-4bit does not appear to have a file named config.json. Checkout 'https://huggingface.co/ehartford/alpaca1337-7b-4bit/main' for available files.
+
+* ccdv/cnn_dailymail (from emirhan) -- downloading 3.0.0 *data3*
+* laion/OIG () (from emirhan) -- downloading *data*
+* EleutherAI/pile () -- downloading in *data*
+* gsm8k (4.6M) (from emirhan) -- downloaded 'main', 'socratic', but gives error with load_dataset: FileNotFoundError: Unable to resolve any data file that matches '['train[-._ 0-9/]**', ...
+* Hello-SimpleAI/HC3 (from emirhan) -- AttributeError: 'NoneType' object has no attribute 'name'
 
 
 ### huggingface/datasets
 
+* allenai/prosocial-dialog (92M) (from emirhan)
+* amazon_reviews_multi (368M) (from emirhan)
+* big_patent (40G) (from emirhan)
+* billsum (261M) (from emirhan)
 * bookcorpus (4.6G) 
-* databricks/databricks-dolly-15k (12M) 
+* checkai/instruction-poems (27M) (from emirhan)
+* databricks/databricks-dolly-15k (12M) (from emirhan)
+* dctanner/oa_recipes (7.4M) (from emirhan)
+* donfu/oa-stackexchange (6.2G) (from emirhan)
+* ehartford/oa_leet10k (46M) (from emirhan)
+* emozilla/soda_synthetic_dialogue (1.8G) (from emirhan)
 * enwik8 (99M) 
 * glue (232M) 
 * imdb (128M) 
-* MBZUAI/LaMini-instruction (1.1G) (2M chatGPT outputs for different prompts)
-* mosaicml/dolly_hhrlhf (46M) 
+* MBZUAI/LaMini-instruction (1.1G) (2M chatGPT outputs for different prompts, from emirhan)
+* mikegarts/oa_tell_a_joke_10000 (5.9G) (from emirhan)
+* mosaicml/dolly_hhrlhf (46M)
+* multi_news (668M) (from emirhan)
+* nomic-ai/gpt4all-j-prompt-generations (1.7G) (from emirhan)
+* OllieStanley/humaneval-mbpp-codegen-qa (244K) (from emirhan)
+* OllieStanley/humaneval-mbpp-testgen-qa (320K) (from emirhan)
+* OllieStanley/oa_camel (227M) (from emirhan)
 * openwebtext (38G) 
 * piqa (5.2M) 
 * ptb_text_only (5.8M) 
+* samsum (11M) (from emirhan)
 * sciq (7.4M) 
 * squad (87M) 
 * super_glue (285M) 
 * tatsu-lab/alpaca (45M) (the original)
 * tiny_shakespeare (1.2M) 
+* totuta/youtube_subs_howto100M (1.2G) (from emirhan)
+* victor123/evol_instruct_70k (126M) (from emirhan)
 * wikitext (1.1G) 
+* xsum (510M) (from emirhan)
 * yahma/alpaca-cleaned (39M) (https://github.com/gururise/AlpacaDataCleaned as of 2023-04-10)
-
-
-### downloading
-
-* ccdv/cnn_dailymail
-* xsum
-* samsum
-* multi_news
-* billsum
-* amazon_reviews_multi
-* big_patent
-* MBZUAI/LaMini-instruction
-* victor123/evol_instruct_70k
-* emozilla/soda_synthetic_dialogue
-* gsm8k
-* Hello-SimpleAI/HC3
-* databricks/databricks-dolly-15k
-* donfu/oa-stackexchange
-* OllieStanley/oa_camel
-* OllieStanley/humaneval-mbpp-codegen-qa
-* OllieStanley/humaneval-mbpp-testgen-qa
-* mikegarts/oa_tell_a_joke_10000
-* totuta/youtube_subs_howto100M
-* dctanner/oa_recipes
-* ehartford/oa_leet10k
-* checkai/instruction-poems
-* nomic-ai/gpt4all-j-prompt-generations
-* allenai/prosocial-dialog
-* laion/OIG
 
 
 ### torchvision.models
@@ -194,7 +207,7 @@ TODO
 * https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
 
 
-## Model sizes
+## Some model sizes
 
 | model         | layer | embd | nhead | vocab | nctx | params         |
 | -----         | ----- | ---- | ----- | ----- | ---- | ------         |

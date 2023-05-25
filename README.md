@@ -75,6 +75,9 @@ TODO
 * decapoda-research/llama-* (7b-hf (13G), 13b-hf (37G), 30b-hf (77G)) AutoConfig:ok, AutoTokenizer:wrong-name-error, AutoModel:ok
 * digitous/Alpacino30b (61G) (from open_llm_leaderboard)
 * eachadea/vicuna-* (7b-1.1 (13G), 13b (25G)) (from open_llm_leaderboard)
+* ehartford/Wizard-Vicuna-13B-Uncensored (49G)
+* ehartford/WizardLM-13B-Uncensored (25G) (see https://t.co/9vrPyktaIz)
+* ehartford/WizardLM-7B-Uncensored (13G)
 * EleutherAI/gpt-* (j-6b (23G), neo-125m (505M), neox-20b (39G)) (from open-llms, open_llm_leaderboard)
 * EleutherAI/pythia-* (70m (160M), 160m (360M), 410m (873M), 1b (2.0G), 1.4b (2.8G), 2.8b (5.4G), 6.9b (13G), 12b (23G)) (from open-llms)
 * facebook/llama-* (7B (13G), 13B (25G)) (the originals, not an hf repo, to load use e.g. AutoModelForCausalLM.from_pretrained("/datasets/NLP/huggingface/hub/models--facebook--llama-7B"))
@@ -85,14 +88,14 @@ TODO
 * hakurei/instruct-12b (45G)
 * HuggingFaceH4/starchat-alpha (30G) (from open_llm_leaderboard)
 * huggyllama/llama-* (7b (13G), 13b (25G), 30b (61G), 65b (123G)) 
-* KoboldAI/OPT-13B-Nerybus-Mix (11G) -- ERROR-reload (from open_llm_leaderboard)
+* KoboldAI/OPT-13B-Nerybus-Mix (25G) (from open_llm_leaderboard)
 * lamini/instruct-tuned-3b (5.7G)
 * lmsys/fastchat-t5-3b-v1.0 (6.3G) 
 * lmsys/vicuna-* (7b-delta-v1.1 (13G), 13b-delta-v1.1 (25G), 7b (13G), 13b (25G)) (for 7b/13b use e.g. AutoModelForCausalLM.from_pretrained("/datasets/NLP/huggingface/hub/models--lmsys--vicuna-7b"))
 * MetaIX/GPT4-X-Alpasta-30b (61G) (from open_llm_leaderboard)
 * mosaicml/mpt-* (1b-redpajama-200b (5.0G), 1b-redpajama-200b-dolly (5.0G), 7b (13G), 7b-chat (13G), 7b-instruct (13G), 7b-storywriter (13G)) (from open-llms, requires einops, trust_remote_code=True, see hf page for details)
 * nomic-ai/gpt4all-* (13b-snoozy (49G), j (23G)) (gururise refers to it but don't know how to download -lora, seems worse than tloen/alpaca-lora-7b) (from open_llm_leaderboard)
-* nomic-ai/gpt4all-* (lora, j-lora) -- ERROR, reload
+* openaccess-ai-collective/manticore-13b (25G)
 * openai-gpt (461M), gpt2 (528M), gpt2-medium (1.5G), gpt2-large (3.1G), gpt2-xl (6.1G), distilgpt2 (341M) (from open_llm_leaderboard)
 * OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5 (23G) (from open-llms, open_llm_leaderboard)
 * openlm-research/open_llama_7b_preview_300bt (13G) (from open-llms, open_llm_leaderboard, use `AutoModelForCausalLM.from_pretrained("openlm-research/open_llama_7b_preview_300bt", subfolder="open_llama_7b_preview_300bt_transformers_weights")`)
@@ -102,32 +105,26 @@ TODO
 * stabilityai/stablelm-* (base-alpha-3b (14G), tuned-alpha-3b (14G), tuned-alpha-7b (30G)) (from open-llms, open_llm_leaderboard)
 * TheBloke/dromedary-65b-lora-HF (123G) (from open_llm_leaderboard)
 * TheBloke/vicuna-13B-1.1-HF (25G) (from open_llm_leaderboard)
+* TheBloke/wizardLM-7B-HF (13G)
 * togethercomputer/GPT-* (JT-6B-v0 (12G), JT-Moderation-6B (12G), NeoXT-Chat-Base-20B (39G)) 
 * togethercomputer/Pythia-Chat-Base-7B (13G) 
 * togethercomputer/RedPajama-INCITE-* (Base-3B-v1 (5.4G), Base-7B-v0.1 (13G), Chat-3B-v1 (5.4G), Chat-7B-v0.1 (13G), Instruct-3B-v1 (5.4G), Instruct-7B-v0.1 (13G)) (from open-llms, open_llm_leaderboard)
 * vicgalle/gpt2-alpaca-gpt4 (492M) (from open_llm_leaderboard)
 * wordcab/llama-natural-instructions-13b (37G) (from open_llm_leaderboard)
-* ehartford/WizardLM-7B-Uncensored (13G)
-* ehartford/WizardLM-13B-Uncensored (25G) (see https://t.co/9vrPyktaIz)
-* ehartford/Wizard-Vicuna-13B-Uncensored (49G)
-* openaccess-ai-collective/manticore-13b (25G)
-* TheBloke/wizardLM-7B-HF (13G)
-* KoboldAI/OPT-13B-Nerybus-Mix (25G) -- testing on *llm2*
 
 
 ### downloading
 
-* ausboss/llama-30b-supercot -- error, retry on *llm*
+* ausboss/llama-30b-supercot -- out-of-memory error with 64G, retry with 128G on *llm* ***
 * nomic-ai/gpt4all-lora -- error
 * nomic-ai/gpt4all-j-lora -- error
-* ehartford/WizardLM-30B-Uncensored -- error
-* ehartford/Wizard-Vicuna-7B-Uncensored -- error
+* ehartford/WizardLM-30B-Uncensored -- error *** retry *llm2*
+* ehartford/Wizard-Vicuna-7B-Uncensored -- error *** retry *llm2*
 * ehartford/alpaca1337-13b-4bit -- error: OSError: ehartford/alpaca1337-13b-4bit does not appear to have a file named config.json. Checkout 'https://huggingface.co/ehartford/alpaca1337-13b-4bit/main' for available files.
 * ehartford/alpaca1337-7b-4bit -- error: OSError: ehartford/alpaca1337-7b-4bit does not appear to have a file named config.json. Checkout 'https://huggingface.co/ehartford/alpaca1337-7b-4bit/main' for available files.
 
-* ccdv/cnn_dailymail (from emirhan) -- downloading 3.0.0 *data3*
-* laion/OIG () (from emirhan) -- downloading *data*
-* EleutherAI/pile () -- downloading in *data*
+* laion/OIG () (from emirhan) -- *** downloading *data*: error: Generating train split: 14113288 examples [36:34, 4918.58 examples/s]Failed to read file '/datasets/NLP/huggingface/datasets/downloads/extracted/13d1404eac66ab41c857612e073018ab83a1dcd1293cc32464dead7b4ce933ba' with error <class 'pyarrow.lib.ArrowInvalid'>: JSON parse error: Missing a comma or '}' after an object member. in row 10
+* EleutherAI/pile () -- *** downloading in *data2*
 * gsm8k (4.6M) (from emirhan) -- downloaded 'main', 'socratic', but gives error with load_dataset: FileNotFoundError: Unable to resolve any data file that matches '['train[-._ 0-9/]**', ...
 * Hello-SimpleAI/HC3 (from emirhan) -- AttributeError: 'NoneType' object has no attribute 'name'
 
@@ -139,6 +136,7 @@ TODO
 * big_patent (40G) (from emirhan)
 * billsum (261M) (from emirhan)
 * bookcorpus (4.6G) 
+* ccdv/cnn_dailymail (1.3G) (from emirhan)
 * checkai/instruction-poems (27M) (from emirhan)
 * databricks/databricks-dolly-15k (12M) (from emirhan)
 * dctanner/oa_recipes (7.4M) (from emirhan)

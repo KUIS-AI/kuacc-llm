@@ -66,6 +66,7 @@ TODO
 * aisquared/chopt-* (125m (240M), 350m (635M), 1_3b (2.5G), 2_7b (5.0G)) 
 * aisquared/chopt-research-* (125m (240M), 350m (635M), 1_3b (2.5G), 2_7b (5.0G)) 
 * aisquared/dlite-v2-* (124m (253M), 355m (704M), 774m (1.5G), 1_5b (3.0G)) (from open-llms, open_llm_leaderboard, lightweight gpt-2 based, finetuned)
+* ausboss/llama-30b-supercot (61G) (needs 128G, out-of-memory error with 64G, high on open_llm_leaderboard)
 * bigscience/bloom-560m (1.1G), bigscience/bloomz-3b (5.7G)
 * CarperAI/stable-vicuna-13b-delta (25G) (from open_llm_leaderboard)
 * cerebras/Cerebras-GPT-* (111M (467M), 256M (1.1G), 590M (2.3G), 1.3B (5.1G), 2.7B (11G), 6.7B (26G), 13B (49G)) (from open-llms, open_llm_leaderboard)
@@ -75,9 +76,8 @@ TODO
 * decapoda-research/llama-* (7b-hf (13G), 13b-hf (37G), 30b-hf (77G)) AutoConfig:ok, AutoTokenizer:wrong-name-error, AutoModel:ok
 * digitous/Alpacino30b (61G) (from open_llm_leaderboard)
 * eachadea/vicuna-* (7b-1.1 (13G), 13b (25G)) (from open_llm_leaderboard)
-* ehartford/Wizard-Vicuna-13B-Uncensored (49G)
-* ehartford/WizardLM-13B-Uncensored (25G) (see https://t.co/9vrPyktaIz)
-* ehartford/WizardLM-7B-Uncensored (13G)
+* ehartford/Wizard-Vicuna-* (7B-Uncensored (26G), 13B-Uncensored (49G)) (see https://t.co/9vrPyktaIz)
+* ehartford/WizardLM-* (7B-Uncensored (13G), 13B-Uncensored (25G), 30B-Uncensored (61G)) (see https://t.co/9vrPyktaIz)
 * EleutherAI/gpt-* (j-6b (23G), neo-125m (505M), neox-20b (39G)) (from open-llms, open_llm_leaderboard)
 * EleutherAI/pythia-* (70m (160M), 160m (360M), 410m (873M), 1b (2.0G), 1.4b (2.8G), 2.8b (5.4G), 6.9b (13G), 12b (23G)) (from open-llms)
 * facebook/llama-* (7B (13G), 13B (25G)) (the originals, not an hf repo, to load use e.g. AutoModelForCausalLM.from_pretrained("/datasets/NLP/huggingface/hub/models--facebook--llama-7B"))
@@ -115,16 +115,13 @@ TODO
 
 ### downloading
 
-* ausboss/llama-30b-supercot -- out-of-memory error with 64G, retry with 128G on *llm* ***
 * nomic-ai/gpt4all-lora -- error
 * nomic-ai/gpt4all-j-lora -- error
-* ehartford/WizardLM-30B-Uncensored -- error *** retry *llm2*
-* ehartford/Wizard-Vicuna-7B-Uncensored -- error *** retry *llm2*
 * ehartford/alpaca1337-13b-4bit -- error: OSError: ehartford/alpaca1337-13b-4bit does not appear to have a file named config.json. Checkout 'https://huggingface.co/ehartford/alpaca1337-13b-4bit/main' for available files.
 * ehartford/alpaca1337-7b-4bit -- error: OSError: ehartford/alpaca1337-7b-4bit does not appear to have a file named config.json. Checkout 'https://huggingface.co/ehartford/alpaca1337-7b-4bit/main' for available files.
-
-* laion/OIG () (from emirhan) -- *** downloading *data*: error: Generating train split: 14113288 examples [36:34, 4918.58 examples/s]Failed to read file '/datasets/NLP/huggingface/datasets/downloads/extracted/13d1404eac66ab41c857612e073018ab83a1dcd1293cc32464dead7b4ce933ba' with error <class 'pyarrow.lib.ArrowInvalid'>: JSON parse error: Missing a comma or '}' after an object member. in row 10
-* EleutherAI/pile () -- *** downloading in *data2*
+n
+* laion/OIG () (from emirhan) -- error: Generating train split: 14113288 examples [36:34, 4918.58 examples/s]Failed to read file '/datasets/NLP/huggingface/datasets/downloads/extracted/13d1404eac66ab41c857612e073018ab83a1dcd1293cc32464dead7b4ce933ba' with error <class 'pyarrow.lib.ArrowInvalid'>: JSON parse error: Missing a comma or '}' after an object member. in row 10
+* EleutherAI/pile () -- *** downloading in *data2* 84%
 * gsm8k (4.6M) (from emirhan) -- downloaded 'main', 'socratic', but gives error with load_dataset: FileNotFoundError: Unable to resolve any data file that matches '['train[-._ 0-9/]**', ...
 * Hello-SimpleAI/HC3 (from emirhan) -- AttributeError: 'NoneType' object has no attribute 'name'
 

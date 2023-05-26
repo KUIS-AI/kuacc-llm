@@ -167,6 +167,7 @@ https://conda.anaconda.org/conda-forge/linux-64/aws-crt-cpp-0.19.9-h85076f6_5.co
 https://conda.anaconda.org/conda-forge/noarch/importlib_metadata-6.6.0-hd8ed1ab_0.conda#3cbc9615f10a3d471532b83e4250b971
 https://conda.anaconda.org/conda-forge/noarch/async-timeout-4.0.2-pyhd8ed1ab_0.tar.bz2#25e79f9a1133556671becbd65a170c78
 https://conda.anaconda.org/conda-forge/linux-64/pandas-2.0.1-py311h320fe9a_1.conda#37f841a3140999c4735f7d8091072bea
+https://conda.anaconda.org/conda-forge/linux-64/zstandard-0.19.0-py311hbe0fcd7_1.conda#1f48d127dd18240505cba632b67f7931
 https://conda.anaconda.org/conda-forge/linux-64/cryptography-40.0.2-py311h9b4c7bb_0.conda#4df4df92db0b9168c11b72460baec870
 https://conda.anaconda.org/conda-forge/linux-64/brotlipy-0.7.0-py311hd4cff14_1005.tar.bz2#9bdac7084ecfc08338bae1b976535724
 https://conda.anaconda.org/conda-forge/linux-64/brotlicffi-1.0.9.2-py311ha362b79_3.tar.bz2#5cebf864e3cdcb7b6c947045b289b7ca

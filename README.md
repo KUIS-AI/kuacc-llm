@@ -121,7 +121,7 @@ TODO
 * ehartford/alpaca1337-7b-4bit -- error: OSError: ehartford/alpaca1337-7b-4bit does not appear to have a file named config.json. Checkout 'https://huggingface.co/ehartford/alpaca1337-7b-4bit/main' for available files.
 n
 * laion/OIG () (from emirhan) -- error: Generating train split: 14113288 examples [36:34, 4918.58 examples/s]Failed to read file '/datasets/NLP/huggingface/datasets/downloads/extracted/13d1404eac66ab41c857612e073018ab83a1dcd1293cc32464dead7b4ce933ba' with error <class 'pyarrow.lib.ArrowInvalid'>: JSON parse error: Missing a comma or '}' after an object member. in row 10
-* EleutherAI/pile () -- *** downloading in *data2* 84%
+* EleutherAI/pile () -- error: json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 10 (char 9)
 * gsm8k (4.6M) (from emirhan) -- downloaded 'main', 'socratic', but gives error with load_dataset: FileNotFoundError: Unable to resolve any data file that matches '['train[-._ 0-9/]**', ...
 * Hello-SimpleAI/HC3 (from emirhan) -- AttributeError: 'NoneType' object has no attribute 'name'
 

@@ -115,6 +115,8 @@ TODO
 
 ### downloading
 
+* ['ai-forever/mGPT', 'facebook/xglm-564M', 'facebook/xglm-1.7B', 'facebook/xglm-2.9B', 'facebook/xglm-4.5B', 'facebook/xglm-7.5B']
+* https://huggingface.co/conceptofmind/Flan-Open-Llama-7b
 * nomic-ai/gpt4all-lora -- error
 * nomic-ai/gpt4all-j-lora -- error
 * ehartford/alpaca1337-13b-4bit -- error: OSError: ehartford/alpaca1337-13b-4bit does not appear to have a file named config.json. Checkout 'https://huggingface.co/ehartford/alpaca1337-13b-4bit/main' for available files.
@@ -200,6 +202,8 @@ n
 * https://github.com/EleutherAI/lm-evaluation-harness
 * https://github.com/eugeneyan/open-llms
 * https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
+* https://chat.lmsys.org/?arena
+* https://lmsys.org/blog/2023-05-03-arena/
 
 
 ## Some model sizes

@@ -57,6 +57,8 @@ To use a llm+adapter:
 TODO
 ```
 
+Here is some info on the huggingface cache structure: https://huggingface.co/docs/huggingface_hub/guides/manage-cache
+
 
 ## Downloaded resources:
 

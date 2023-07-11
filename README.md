@@ -65,6 +65,7 @@ Here is some info on the huggingface cache structure: https://huggingface.co/doc
 ### huggingface/transformers
 
 * Aeala/GPT4-x-AlpacaDente2-30b (61G) (from open_llm_leaderboard)
+* ai-forever/mGPT (3.3G)
 * aisquared/chopt-* (125m (240M), 350m (635M), 1_3b (2.5G), 2_7b (5.0G)) 
 * aisquared/chopt-research-* (125m (240M), 350m (635M), 1_3b (2.5G), 2_7b (5.0G)) 
 * aisquared/dlite-v2-* (124m (253M), 355m (704M), 774m (1.5G), 1_5b (3.0G)) (from open-llms, open_llm_leaderboard, lightweight gpt-2 based, finetuned)
@@ -84,6 +85,7 @@ Here is some info on the huggingface cache structure: https://huggingface.co/doc
 * EleutherAI/pythia-* (70m (160M), 160m (360M), 410m (873M), 1b (2.0G), 1.4b (2.8G), 2.8b (5.4G), 6.9b (13G), 12b (23G)) (from open-llms)
 * facebook/llama-* (7B (13G), 13B (25G)) (the originals, not an hf repo, to load use e.g. AutoModelForCausalLM.from_pretrained("/datasets/NLP/huggingface/hub/models--facebook--llama-7B"))
 * facebook/opt-* (125m (242M), 350m (636M), 1.3b (2.5G), 13b (25G)) (from open_llm_leaderboard)
+* facebook/xglm-* (564M (1.1G), 1.7B (3.3G), 2.9B (5.6G), 4.5B (9.6G), 7.5B (15G))
 * google/flan-t5-* (small (298M), base (949M), large (3.0G), xl (11G), xxl (43G)) 
 * google/flan-ul2 (37G), google/ul2 (37G) 
 * h2oai/h2ogpt-oig-oasst1-512-6.9b (13G) (from open-llms)
@@ -108,6 +110,7 @@ Here is some info on the huggingface cache structure: https://huggingface.co/doc
 * TheBloke/dromedary-65b-lora-HF (123G) (from open_llm_leaderboard)
 * TheBloke/vicuna-13B-1.1-HF (25G) (from open_llm_leaderboard)
 * TheBloke/wizardLM-7B-HF (13G)
+* tiiuae/falcon-* (rw-1b (2.5G), rw-7b (15G), 7b (14G), 7b-instruct (14G), 40b (79G), 40b-instruct (79G))
 * togethercomputer/GPT-* (JT-6B-v0 (12G), JT-Moderation-6B (12G), NeoXT-Chat-Base-20B (39G)) 
 * togethercomputer/Pythia-Chat-Base-7B (13G) 
 * togethercomputer/RedPajama-INCITE-* (Base-3B-v1 (5.4G), Base-7B-v0.1 (13G), Chat-3B-v1 (5.4G), Chat-7B-v0.1 (13G), Instruct-3B-v1 (5.4G), Instruct-7B-v0.1 (13G)) (from open-llms, open_llm_leaderboard)
@@ -117,7 +120,6 @@ Here is some info on the huggingface cache structure: https://huggingface.co/doc
 
 ### downloading
 
-* ['ai-forever/mGPT', 'facebook/xglm-564M', 'facebook/xglm-1.7B', 'facebook/xglm-2.9B', 'facebook/xglm-4.5B', 'facebook/xglm-7.5B']
 * https://huggingface.co/conceptofmind/Flan-Open-Llama-7b
 * nomic-ai/gpt4all-lora -- error
 * nomic-ai/gpt4all-j-lora -- error

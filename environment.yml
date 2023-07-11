@@ -4,6 +4,7 @@ channels:
 dependencies:
 - _libgcc_mutex=0.1=conda_forge
 - _openmp_mutex=4.5=2_kmp_llvm
+- accelerate=0.20.3=pyhd8ed1ab_0
 - aiohttp=3.8.4=py311h2582759_0
 - aiosignal=1.3.1=pyhd8ed1ab_0
 - arrow-cpp=12.0.0=ha770c72_1_cpu
@@ -22,6 +23,7 @@ dependencies:
 - aws-checksums=0.1.14=h4f47f36_6
 - aws-crt-cpp=0.19.9=h85076f6_5
 - aws-sdk-cpp=1.10.57=hf40e4db_10
+- bitsandbytes=0.39.1=py311h2ed503c_0
 - brotli-python=1.0.9=py311ha362b79_8
 - brotlicffi=1.0.9.2=py311ha362b79_3
 - brotlipy=0.7.0=py311hd4cff14_1005
@@ -129,6 +131,8 @@ dependencies:
 - parquet-cpp=1.5.1=2
 - pillow=9.5.0=py311h573f0d3_0
 - pip=23.1.2=pyhd8ed1ab_0
+- platformdirs=3.5.1=pyhd8ed1ab_0
+- pooch=1.7.0=pyha770c72_3
 - protobuf=4.21.12=py311hcafe171_0
 - psutil=5.9.5=py311h2582759_0
 - pthread-stubs=0.4=h36c2ea0_1001
@@ -157,6 +161,7 @@ dependencies:
 - responses=0.18.0=pyhd8ed1ab_0
 - s2n=1.3.42=h3358134_0
 - sacremoses=0.0.53=pyhd8ed1ab_0
+- scipy=1.10.1=py311h64a7726_3
 - sentencepiece=0.1.97=h38be061_1
 - sentencepiece-python=0.1.97=py311h1d730ea_1
 - sentencepiece-spm=0.1.97=h47aad16_1

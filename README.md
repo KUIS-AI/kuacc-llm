@@ -57,6 +57,16 @@ To use a llm+adapter:
 TODO
 ```
 
+To use a model with lower precision (32, 16, 8, 4 bit):
+```
+AutoModelForCausalLM.from_pretrained("gpt2")  # fp32, defaults to cpu
+AutoModelForCausalLM.from_pretrained("gpt2", device_map="auto")     # fp32, gpu if available
+AutoModelForCausalLM.from_pretrained("gpt2", dtype=torch.float16)   # fp16
+AutoModelForCausalLM.from_pretrained("gpt2", dtype=torch.bfloat16)  # bf16, better with overflows
+TODO...
+```
+
+
 Here is some info on the huggingface cache structure: https://huggingface.co/docs/huggingface_hub/guides/manage-cache
 
 

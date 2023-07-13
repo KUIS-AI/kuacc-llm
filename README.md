@@ -50,8 +50,10 @@ for n,p in model.named_parameters():
 ```
 
 To use a model with lower precision (32, 16, 8, 4 bit): For setup see:
-* https://huggingface.co/blog/hf-bitsandbytes-integration
-* https://huggingface.co/blog/4bit-transformers-bitsandbytes
+* https://huggingface.co/blog/hf-bitsandbytes-integration (basic theory)
+* https://huggingface.co/blog/4bit-transformers-bitsandbytes (4-bit types, NF4 etc)
+* https://huggingface.co/docs/transformers/main_classes/quantization (advanced options)
+* https://huggingface.co/docs/transformers/perf_infer_gpu_one (efficient inference on single gpu)
 ```
 from transformers import AutoModelForCausalLM
 m = "facebook/opt-350m"  # gpt2 is not supported with 4/8 bit

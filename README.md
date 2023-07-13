@@ -4,6 +4,8 @@ Common LLM setup for the KUACC cluster in Koc University, Istanbul.
 tldr: `$ source /datasets/NLP/setenv.sh` to set up your environment and access models/datasets without downloading them.
 
 This currently sets the TORCH_HOME and HF_HOME and directs the following commands to use the read-only cache under /datasets/NLP:
+* Here is some info on the huggingface cache structure: https://huggingface.co/docs/huggingface_hub/guides/manage-cache
+
 ```
 import transformers, datasets, torchvision
 transformers.AutoModelForCausalLM.from_pretrained("gpt2")
@@ -47,6 +49,20 @@ for n,p in model.named_parameters():
 ...
 ```
 
+To use a model with lower precision (32, 16, 8, 4 bit): For setup see:
+* https://huggingface.co/blog/hf-bitsandbytes-integration
+* https://huggingface.co/blog/4bit-transformers-bitsandbytes
+```
+from transformers import AutoModelForCausalLM
+m = "facebook/opt-350m"  # gpt2 is not supported with 4/8 bit
+AutoModelForCausalLM.from_pretrained(m)  # fp32, defaults to cpu
+AutoModelForCausalLM.from_pretrained(m, device_map="auto")     # fp32, gpu if available
+AutoModelForCausalLM.from_pretrained(m, device_map="auto", dtype=torch.float16)   # fp16
+AutoModelForCausalLM.from_pretrained(m, device_map="auto", dtype=torch.bfloat16)  # bf16, better with overflows
+AutoModelForCausalLM.from_pretrained(m, device_map="auto", load_in_8bit=True)
+AutoModelForCausalLM.from_pretrained(m, device_map="auto", load_in_4bit=True)
+```
+
 To investigate activations:
 ```
 TODO
@@ -56,18 +72,6 @@ To use a llm+adapter:
 ```
 TODO
 ```
-
-To use a model with lower precision (32, 16, 8, 4 bit):
-```
-AutoModelForCausalLM.from_pretrained("gpt2")  # fp32, defaults to cpu
-AutoModelForCausalLM.from_pretrained("gpt2", device_map="auto")     # fp32, gpu if available
-AutoModelForCausalLM.from_pretrained("gpt2", dtype=torch.float16)   # fp16
-AutoModelForCausalLM.from_pretrained("gpt2", dtype=torch.bfloat16)  # bf16, better with overflows
-TODO...
-```
-
-
-Here is some info on the huggingface cache structure: https://huggingface.co/docs/huggingface_hub/guides/manage-cache
 
 
 ## Downloaded resources:

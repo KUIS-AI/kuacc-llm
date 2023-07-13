@@ -190,3 +190,4 @@ https://conda.anaconda.org/conda-forge/linux-64/pyarrow-12.0.1-py311h39c9aba_4_c
 https://conda.anaconda.org/conda-forge/linux-64/bitsandbytes-0.39.1-py311h2ed503c_0.conda#9875a622b64b3ca30d432e3bb92df828
 https://conda.anaconda.org/conda-forge/noarch/datasets-2.13.1-pyhd8ed1ab_0.conda#2667cdd696603bfb65013bcdbc36fdc0
 https://conda.anaconda.org/conda-forge/noarch/transformers-4.30.2-pyhd8ed1ab_1.conda#9c3ec80f0661eb5e84b38e9b5d63974f
+https://conda.anaconda.org/conda-forge/noarch/peft-0.3.0-pyhd8ed1ab_0.conda#1a0e8b25ce35eb1d9df2695997ad3157

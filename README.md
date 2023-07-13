@@ -49,11 +49,13 @@ for n,p in model.named_parameters():
 ...
 ```
 
-To use a model with lower precision (32, 16, 8, 4 bit): For setup see:
+To use a model with lower precision (32, 16, 8, 4 bit): For setup and tips see:
 * https://huggingface.co/blog/hf-bitsandbytes-integration (basic theory)
 * https://huggingface.co/blog/4bit-transformers-bitsandbytes (4-bit types, NF4 etc)
 * https://huggingface.co/docs/transformers/main_classes/quantization (advanced options)
 * https://huggingface.co/docs/transformers/perf_infer_gpu_one (efficient inference on single gpu)
+* https://huggingface.co/docs/accelerate/usage_guides/big_modeling (handling big models for inference)
+
 ```
 from transformers import AutoModelForCausalLM
 m = "facebook/opt-350m"  # gpt2 is not supported with 4/8 bit
@@ -65,15 +67,25 @@ AutoModelForCausalLM.from_pretrained(m, device_map="auto", load_in_8bit=True)
 AutoModelForCausalLM.from_pretrained(m, device_map="auto", load_in_4bit=True)
 ```
 
+To use a llm+adapter:
+```
+from peft import PeftModel
+from transformers import LlamaForCausalLM, LlamaTokenizer
+from huggingface_hub import snapshot_download
+
+snapshot_download(repo_id="esokullu/llama-13B-ft-sokullu-lora")
+base_model_name_or_path = "huggyllama/llama-13b"
+lora_model_name_or_path = "/datasets/NLP/huggingface/hub/models--esokullu--llama-13B-ft-sokullu-lora/snapshots/542c2f91183ac5bc5ed13d5130161b11b7bcc9b8" # "sokullu/sokullu-lora-13b"
+tokenizer = LlamaTokenizer.from_pretrained(base_model_name_or_path)
+model = LlamaForCausalLM.from_pretrained(base_model_name_or_path, load_in_8bit=True, device_map="auto")
+model = PeftModel.from_pretrained(model, lora_model_name_or_path)
+```
+
 To investigate activations:
 ```
 TODO
 ```
 
-To use a llm+adapter:
-```
-TODO
-```
 
 
 ## Downloaded resources:

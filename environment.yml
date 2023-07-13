@@ -125,6 +125,7 @@ dependencies:
 - orc=1.9.0=h2f23424_1
 - packaging=23.1=pyhd8ed1ab_0
 - pandas=2.0.3=py311h320fe9a_1
+- peft=0.3.0=pyhd8ed1ab_0
 - pillow=10.0.0=py311h0b84326_0
 - pip=23.1.2=pyhd8ed1ab_0
 - platformdirs=3.8.1=pyhd8ed1ab_0

@@ -33,8 +33,8 @@ dependencies:
 - charset-normalizer=3.2.0=pyhd8ed1ab_0
 - click=8.1.4=unix_pyh707e725_0
 - colorama=0.4.6=pyhd8ed1ab_0
-- cuda-version=11.8=h70ddcb2_2
-- cudatoolkit=11.8.0=h37601d7_11
+- cuda-version=11.2=hb11dac2_2
+- cudatoolkit=11.2.2=hc23eb0c_12
 - cudnn=8.8.0.121=h0800d71_1
 - dataclasses=0.8=pyhc8e2a94_3
 - datasets=2.13.1=pyhd8ed1ab_0

@@ -124,6 +124,7 @@ TODO
 * lamini/instruct-tuned-3b (5.7G)
 * lmsys/fastchat-t5-3b-v1.0 (6.3G) 
 * lmsys/vicuna-* (7b-delta-v1.1 (13G), 13b-delta-v1.1 (25G), 7b (13G), 13b (25G)) (for 7b/13b use e.g. AutoModelForCausalLM.from_pretrained("/datasets/NLP/huggingface/hub/models--lmsys--vicuna-7b"))
+* meta-llama/Llama-2-* (7b-hf (13G), 7b-chat-hf (13G), 13b-hf (), 13b-chat-hf (), 70b-hf (), 70b-chat-hf ())
 * MetaIX/GPT4-X-Alpasta-30b (61G) (from open_llm_leaderboard)
 * mosaicml/mpt-* (1b-redpajama-200b (5.0G), 1b-redpajama-200b-dolly (5.0G), 7b (13G), 7b-chat (13G), 7b-instruct (13G), 7b-storywriter (13G)) (from open-llms, requires einops, trust_remote_code=True, see hf page for details)
 * nomic-ai/gpt4all-* (13b-snoozy (49G), j (23G)) (gururise refers to it but don't know how to download -lora, seems worse than tloen/alpaca-lora-7b) (from open_llm_leaderboard)

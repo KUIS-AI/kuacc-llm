@@ -7,7 +7,6 @@ dependencies:
 - accelerate=0.20.3=pyhd8ed1ab_0
 - aiohttp=3.8.4=py311h459d7ec_1
 - aiosignal=1.3.1=pyhd8ed1ab_0
-- annotated-types=0.5.0=pyhd8ed1ab_0
 - asttokens=2.2.1=pyhd8ed1ab_0
 - async-timeout=4.0.2=pyhd8ed1ab_0
 - attrs=23.1.0=pyh71513ae_1
@@ -46,7 +45,6 @@ dependencies:
 - datasets=2.13.1=pyhd8ed1ab_0
 - debugpy=1.6.8=py311hb755f60_0
 - decorator=5.1.1=pyhd8ed1ab_0
-- deepspeed=0.9.5=cuda112py311he54c9da_200
 - dill=0.3.6=pyhd8ed1ab_1
 - einops=0.6.1=pyhd8ed1ab_0
 - executing=1.2.0=pyhd8ed1ab_0
@@ -58,7 +56,6 @@ dependencies:
 - glog=0.6.0=h6f12383_0
 - gmp=6.2.1=h58526e2_0
 - gmpy2=2.1.2=py311h6a5fa03_1
-- hjson-py=3.1.0=pyhd8ed1ab_0
 - huggingface_hub=0.16.3=pyhd8ed1ab_0
 - icu=72.1=hcb278e6_0
 - idna=3.4=pyhd8ed1ab_0
@@ -78,7 +75,6 @@ dependencies:
 - ld_impl_linux-64=2.40=h41732ed_0
 - lerc=4.0.0=h27087fc_0
 - libabseil=20230125.3=cxx17_h59595ed_0
-- libaio=0.3.113=h166bdaf_0
 - libarrow=12.0.1=hd2d78f0_4_cpu
 - libblas=3.9.0=17_linux64_openblas
 - libbrotlicommon=1.0.9=h166bdaf_9
@@ -160,14 +156,11 @@ dependencies:
 - pthread-stubs=0.4=h36c2ea0_1001
 - ptyprocess=0.7.0=pyhd3deb0d_0
 - pure_eval=0.2.2=pyhd8ed1ab_0
-- py-cpuinfo=9.0.0=pyhd8ed1ab_0
 - py7zr=0.20.5=pyhd8ed1ab_1
 - pyarrow=12.0.1=py311h39c9aba_4_cpu
 - pybcj=1.0.1=py311hd4cff14_2
 - pycparser=2.21=pyhd8ed1ab_0
 - pycryptodomex=3.18.0=py311h459d7ec_0
-- pydantic=2.1.1=pyhd8ed1ab_0
-- pydantic-core=2.4.0=py311h46250e7_0
 - pygments=2.16.1=pyhd8ed1ab_0
 - pyppmd=1.0.0=py311ha362b79_1
 - pysocks=1.7.1=pyha2e5f31_6

@@ -149,6 +149,7 @@ TODO
 
 ### downloading
 
+* bigcode/starcoder
 * https://huggingface.co/conceptofmind/Flan-Open-Llama-7b
 * nomic-ai/gpt4all-lora -- error
 * nomic-ai/gpt4all-j-lora -- error

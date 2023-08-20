@@ -98,6 +98,7 @@ TODO
 * aisquared/chopt-research-* (125m (240M), 350m (635M), 1_3b (2.5G), 2_7b (5.0G)) 
 * aisquared/dlite-v2-* (124m (253M), 355m (704M), 774m (1.5G), 1_5b (3.0G)) (from open-llms, open_llm_leaderboard, lightweight gpt-2 based, finetuned)
 * ausboss/llama-30b-supercot (61G) (needs 128G, out-of-memory error with 64G, high on open_llm_leaderboard)
+* bigcode/starcoder (60G)
 * bigscience/bloom-560m (1.1G), bigscience/bloomz-3b (5.7G)
 * CarperAI/stable-vicuna-13b-delta (25G) (from open_llm_leaderboard)
 * cerebras/Cerebras-GPT-* (111M (467M), 256M (1.1G), 590M (2.3G), 1.3B (5.1G), 2.7B (11G), 6.7B (26G), 13B (49G)) (from open-llms, open_llm_leaderboard)
@@ -149,7 +150,6 @@ TODO
 
 ### downloading
 
-* bigcode/starcoder
 * https://huggingface.co/conceptofmind/Flan-Open-Llama-7b
 * nomic-ai/gpt4all-lora -- error
 * nomic-ai/gpt4all-j-lora -- error
@@ -164,20 +164,24 @@ n
 
 ### huggingface/datasets
 
+* ai2_arc (2.3M) (from hf_leaderboard)
 * allenai/prosocial-dialog (92M) (from emirhan)
 * amazon_reviews_multi (368M) (from emirhan)
 * big_patent (40G) (from emirhan)
 * billsum (261M) (from emirhan)
 * bookcorpus (4.6G) 
+* cais/mmlu (8.6G) (from hf_leaderboard)
 * ccdv/cnn_dailymail (1.3G) (from emirhan)
 * checkai/instruction-poems (27M) (from emirhan)
 * databricks/databricks-dolly-15k (12M) (from emirhan)
 * dctanner/oa_recipes (7.4M) (from emirhan)
 * donfu/oa-stackexchange (6.2G) (from emirhan)
 * ehartford/oa_leet10k (46M) (from emirhan)
+* EleutherAI/truthful_qa_mc (216K) (from hf_leaderboard)
 * emozilla/soda_synthetic_dialogue (1.8G) (from emirhan)
 * enwik8 (99M) 
 * glue (232M) 
+* hellaswag (63M) (from hf_leaderboard)
 * imdb (128M) 
 * MBZUAI/LaMini-instruction (1.1G) (2M chatGPT outputs for different prompts, from emirhan)
 * mikegarts/oa_tell_a_joke_10000 (5.9G) (from emirhan)

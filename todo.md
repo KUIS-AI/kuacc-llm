@@ -114,3 +114,6 @@
 * huggingface/transformers: nomic-ai/gpt4all-lora-epoch-3 
 * huggingface/transformers: samwit/alpaca7B-lora  (original alpaca: gururise refers to it but don't know how to download)
 * huggingface/transformers: tloen/alpaca-lora-7b  (trained with yahma/alpaca-cleaned 2023-03-26: gururise refers to it but don't know how to download)
+* Open-Orca/FLAN
+* Open-Orca/OpenOrca
+* garage-bAInd/Open-Platypus
